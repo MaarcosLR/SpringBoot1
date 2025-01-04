@@ -1,0 +1,132 @@
+openapi: 3.0.3
+info:
+  title: Task Management API
+  version: 1.0.0
+  description: API for managing tasks with authentication and authorization using Spring Boot.
+
+paths:
+  /task:
+    post:
+      summary: Create a task
+      operationId: createTask
+      tags:
+        - Task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTaskRequest'
+      responses:
+        '200':
+          description: Task created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    get:
+      summary: Get all tasks
+      operationId: getAllTasks
+      tags:
+        - Task
+      responses:
+        '200':
+          description: List of all tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+  /task/{id}/complete:
+    patch:
+      summary: Mark a task as completed
+      operationId: completeTask
+      tags:
+        - Task
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: Task ID
+      responses:
+        '201':
+          description: Task marked as completed
+        '404':
+          description: Task not found
+
+  /task/{id}:
+    delete:
+      summary: Delete a task
+      operationId: deleteTask
+      tags:
+        - Task
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: Task ID
+      responses:
+        '204':
+          description: Task deleted successfully
+        '404':
+          description: Task not found
+
+components:
+  schemas:
+    CreateTaskRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        dueDate:
+          type: string
+          format: date-time
+          description: "The due date and time with timezone offset, e.g., '2023-10-01T10:00:00+02:00'"
+        status:
+          type: string
+          enum: [ PENDING, COMPLETED ]
+        parentTaskId:
+          type: integer
+    Task:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+        description:
+          type: string
+        dueDate:
+          type: string
+          format: date-time
+          description: "The due date and time in UTC, e.g., '2023-10-01T08:00:00+00:00'"
+        status:
+          type: string
+          enum: [PENDING, COMPLETED]
+        parentTaskId:
+          type: integer
+        subtasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Task'
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string

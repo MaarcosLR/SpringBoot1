@@ -1,0 +1,16 @@
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\apirest\controller\CompleteTaskController.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\apirest\controller\CreateTaskController.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\apirest\mapper\TaskManagementDTOListMapper.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\apirest\mapper\TaskManagementDTOMapper.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\apirest\mapper\TaskManagementMapper.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\application\usecase\TaskManagementCompleteUseCaseImpl.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\DemoApplication.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\domain\usecase\TaskManagementCompleteUseCase.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\management\mappers\TaskMapper.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\management\model\TaskEntity.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\src\main\java\com\example\demo\management\model\TaskStatusEnum.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\target\generated-sources\openapi\src\main\java\com\example\api\ApiUtil.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\target\generated-sources\openapi\src\main\java\com\example\api\TaskApi.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\target\generated-sources\openapi\src\main\java\com\example\model\CreateTaskRequestDTO.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\target\generated-sources\openapi\src\main\java\com\example\model\ErrorResponseDTO.java
+C:\Users\falco\Desktop\SpringBootEclipse\demo\demo\target\generated-sources\openapi\src\main\java\com\example\model\TaskDTO.java
